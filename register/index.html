@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>Registration Form</title>
+<script language="javascript" type="text/javascript">
+
+function checkform1()
+{
+var error="";
+if(document.form1.Name.value=="")
+error=error+"Name is a compulsary field\n";
+
+if(document.form1.ID.value=="")
+error=error+"Email Id is a compulsary field\n";
+
+if(document.form1.Password.value=="")
+error=error+"Password is a compulsary field\n";
+
+if(document.form1.Confirm.value=="")
+error=error+"Confirm Password is a compulsary field\n";
+
+if(document.form1.Password.value.length<6)
+error=error+"Password should have at least six characters\n";
+
+if(document.form1.Password.value!=document.form1.Confirm.value)
+error=error+"Both passwords do not match\n";
+
+if (error!="")
+alert(error);
+
+else
+{
+document.form1.Name.value="";
+document.form1.ID.value="";
+document.form1.Password.value="";
+document.form1.Confirm.value="";
+alert("Congrats!! ");
+}
+}
+
+function cancelform()
+{
+document.form1.Name.value="";
+document.form1.ID.value="";
+document.form1.Password.value="";
+document.form1.Confirm.value="";
+alert("BBye!!");
+}
+</script>
+</head>
+<body background="ss039.jpg">
+<center>
+  <h1><font color="#6699FF" size="8" face=" Comic Sans MS"> 
+    Welcome to Sports Capture Portal </font>
+
+<p align="center"><font size="6" face="Comic Sans MS"><strong><font>Fields 
+    marked with</font> <font>*</font> <font>are 
+    compulsory for registration</font></strong></font></p>
+
+<center><form action="" method="post" name="form1">
+
+	<font face="Comic Sans MS size="6">*</font><font face=" Comic Sans MS"> 
+	<font size=6>Name</font></font><font size=6> :</font> 
+        <input name="Name" type="text" id="Name" size=30><br>
+   
+
+     <font face="Comic Sans MS size="6">*</font><font face="Comic Sans MS size="6"> 
+      Choose your Mail ID :</font> 
+        <input name="ID" type="text" id="ID" size="25"><br>
+   
+
+      <font face="Comic Sans MS size="6">*</font><font face=" Comic Sans MS size=6"> 
+        Choose Password :</font> 
+        <input name="Password" type="password" id="Password">
+        <font face=" Comic Sans MS">minimum 6 characters</font><br> 
+      
+
+       <font face="Comic Sans MS size="6">*</font><font face=" Comic Sans MS size="6"> 
+      Confirm your Password :</font> 
+        <input name="Confirm" type="password" id="Confirm Password">
+      
+
+ </form>
+</center>
+
+      <img src="red.jpg" name="Submit" width="131" height="98" id="Submit" onClick=checkform1()> 
+      </a> 
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+ <img src="pink.jpg" name="Cancel" width="110" height="98" id="Cancel" onClick=cancelform()> 
+      </a> 
+</p>
+<br>
+<a href="../index.html"><font color=white>HOME</font></a>
+</center></body>
+</html>
+
+
+
+
+
+
